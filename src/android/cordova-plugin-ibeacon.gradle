@@ -1,14 +1,15 @@
 repositories{
-    jcenter()
+    mavenCentral()
 }
 
 dependencies {
-    implementation 'org.altbeacon:android-beacon-library:2.19.5-beta9'
+    implementation 'org.altbeacon:android-beacon-library:2.21.2'
 }
 
 android {
-    packagingOptions {
-        exclude 'META-INF/NOTICE'
-        exclude 'META-INF/LICENSE'
+    packaging {
+        resources {
+            excludes += ['META-INF/NOTICE', 'META-INF/LICENSE']
+        }
     }
 }
