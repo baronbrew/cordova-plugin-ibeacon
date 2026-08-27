@@ -18,6 +18,10 @@
  */
 
 #import <Foundation/Foundation.h>
+// LMLogger.m uses UIApplication and UILocalNotification. Older cordova-ios supplied a global
+// prefix header that pulled in UIKit implicitly; cordova-ios 7 and 8 removed it, so the import
+// must be explicit or the implementation fails to compile.
+#import <UIKit/UIKit.h>
 
 @interface LMLogger : NSObject
 
